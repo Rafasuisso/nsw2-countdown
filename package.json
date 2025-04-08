@@ -5,8 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "deploy": "ng build --output-path docs --base-href /nsw2-countdown/ && git add docs -f && git commit -m \"deploy\" && git push"
   },
   "private": true,
   "dependencies": {
