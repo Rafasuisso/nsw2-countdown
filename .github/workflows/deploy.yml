@@ -21,11 +21,8 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Build do projeto Angular
-        run: |
-          npm run build -- --configuration production --base-href /nsw2-countdown/
-          mkdir -p docs
-          cp -r dist/nsw2-countdown/browser/* docs/
+      - name: Build do projeto Angular (direto para docs/)
+        run: ng build --configuration production --output-path docs --base-href /nsw2-countdown/
 
       - name: Commit e push da pasta docs
         run: |
