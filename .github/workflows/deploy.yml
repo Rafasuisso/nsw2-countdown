@@ -22,7 +22,10 @@ jobs:
         run: npm install
 
       - name: Build do projeto Angular
-        run: ng build --configuration production --output-path docs --base-href /nsw2-countdown/
+        run: |
+          npm run build -- --configuration production --base-href /nsw2-countdown/
+          mkdir -p docs
+          cp -r dist/nsw2-countdown/browser/* docs/
 
       - name: Commit e push da pasta docs
         run: |
@@ -31,4 +34,3 @@ jobs:
           git add docs -f
           git commit -m "deploy automático [ci skip]" || echo "sem alterações"
           git push origin main
-
