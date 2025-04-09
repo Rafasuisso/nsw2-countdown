@@ -23,3 +23,16 @@ git clone https://github.com/Rafasuisso/nsw2-countdown.git
 cd nsw2-countdown
 npm install
 ng serve
+
+## 📦 Como fazer o deploy
+
+```bash
+ng build --configuration production --base-href /nsw2-countdown/
+
+rm -rf docs
+mkdir docs
+cp -r dist/nsw2-countdown/browser/* docs/
+
+git add docs -f
+git commit -m "Realizando deploy"
+git push origin main

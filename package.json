@@ -7,8 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng build --output-path docs --base-href /nsw2-countdown/ && git add docs -f && git commit -m \"deploy\" && git push"
+    "e2e": "ng e2e"  
   },
   "private": true,
   "dependencies": {
@@ -28,6 +27,7 @@
     "@angular/cli": "^19.2.6",
     "@angular/compiler-cli": "^19.2.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
