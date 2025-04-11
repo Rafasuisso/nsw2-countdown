@@ -1,0 +1,19 @@
+<div class="container">
+  <!-- Imagem do Nintendo Switch -->
+<app-logo></app-logo>
+  
+  <h1 class="title">Contagem Regressiva para o Nintendo Switch 2</h1>
+
+  <div class="countdown">
+    <div class="box"><span>{{ days }}</span><small> dias</small></div>
+    <div class="box"><span>{{ hours }}</span><small> horas</small></div>
+    <div class="box"><span>{{ minutes }}</span><small> minutos</small></div>
+    <div class="box"><span>{{ seconds }}</span><small> segundos</small></div>
+  </div>
+
+  <!-- Botões -->
+  <div class="button-group">
+    <button (click)="openNintendoSite()">Ver mais no site oficial</button>
+    <button (click)="addToCalendar()">Adicionar ao calendário</button>
+  </div>
+</div>
